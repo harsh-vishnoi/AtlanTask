@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 
 const upload = require('./Routes/upload.js');
-// const exp = require('./Routes/export.js');
 const auth = require('./Routes/auth.js');
 
 const mongoose = require('mongoose');
@@ -21,7 +20,6 @@ mongoose.connect(db, {
 
 app.use(express.json());
 
-// app.use('/export', exp);
 app.use('/upload', upload);
 app.use('/auth', auth);
 
