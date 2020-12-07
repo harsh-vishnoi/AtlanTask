@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atlan
+  labels:
+    app: atlan
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atlan
+  template:
+    metadata:
+      labels:
+        app: atlan
+    spec:
+      containers:
+        - name: atlan
+          image: harshvishnoi/atlantask:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
