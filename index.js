@@ -20,6 +20,9 @@ mongoose.connect(db, {
 
 app.use(express.json());
 
+app.get('/', function(req, res){
+  res.send("Run /auth/signup or /auth/signin to upload files.")
+})
 app.use('/upload', upload);
 app.use('/auth', auth);
 
