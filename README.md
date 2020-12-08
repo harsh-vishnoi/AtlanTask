@@ -28,6 +28,7 @@ Body (Form data)
 Select file and update key value pair. Run the Route and thid will upload file in uploads folder under Routes Directory.
 
 POST   &nbsp; localhost:3000/upload/terminate
+Running this route in between of the file upload will call abort function which will abort the file upload.
 
 **DockerFile**
 It contains all the the required things to build an image including nodejs module and few RUN commands.
